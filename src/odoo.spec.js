@@ -1,13 +1,12 @@
 describe("jsonRpc tests", function() {
 
-	var $httpBackend;
-	var jsonRpc;
+	var odoo;
 
-	beforeEach(module('odoo'));
-
-	beforeEach(inject(function(_jsonRpc_) {
-		jsonRpc = _jsonRpc_;
-	}));
+	beforeEach( () => {
+		
+		console.log('on inject odoo', _odoo_)
+		odoo = _odoo_;
+	});
 
 	beforeEach(inject(function(_$httpBackend_) {
 		$httpBackend = _$httpBackend_
